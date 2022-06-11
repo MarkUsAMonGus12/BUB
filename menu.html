@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menustyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <div class="left-column">
+            <img data-image="little" src="TiKtoTakoyDavayDisvidanie/Small.png">
+            <img data-image="middle" src="TiKtoTakoyDavayDisvidanie/Middle.png">
+            <img data-image="big" class="active" src="TiKtoTakoyDavayDisvidanie/Big.png">
+        </div>
+
+        <div class="right-column">
+            <div class="product-description">
+                <span>Cofee</span>
+                <h1>Дебылысвц</h1>
+                <p>Величайшая в мире игра о рукопашном бое выходит на новый уровень: встречайте Ultra Street Fighter IV! Новая игра продолжает славные традиции серии и содержит пять новых персонажей и шесть новых уровней для сумасшедших драк. Мы отладили игровой процесс, а ещё игру можно улучшить, установив оригинальные модификации.
+                    В качестве приятного дополнения можно получить все костюмы из предыдущих материалов для загрузки! Спешите сыграть в Ultra!</p>
+            </div>
+
+            <div class="product-configuration">
+                <div class="product-size">
+                    <span>Choose Какую-то фигню</span>
+
+                    <div class="size-choose">
+                        <div>
+                            <input data-image="little" type="radio" id="little" value="little">
+                            <label for="little">
+                                <span></span>
+                            </label>
+
+                            <div>
+                                <input data-image="middle" type="radio" id="middle" value="middle">
+                                <label for="middle">
+                                    <span></span>
+                                </label>
+
+                            <div>
+                                <input class="active" data-image="big" type="radio" id="big" value="big">
+                                <label for="big">
+                                    <span></span>
+                                </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-price">
+                <span>150000000$</span>
+                <a href="#" class="cart-btn">Добавить в мусоррку</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            $('.size-choose input').on('click', function() {
+                var cofeesize = $(this) .attr('data-image');
+                
+                $('.active').removeClass('active');
+                $('.left-column img[data-image = ' + cofeesize + ']').addClass('active');
+                $(this).addClass('active'); /*fdsfds тут живёт чебурек*/
+            })
+        })
+    </script>
+</body>
+</html>
